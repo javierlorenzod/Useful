@@ -36,3 +36,11 @@ If that is the case, the way of fixing it consist in deleting the following line
 -gencode arch=compute_20,code=sm_20 \
 -gencode arch=compute_20,code=sm_21 \
 ```
+## OpenCV 3 error
+If you have an error like the following:
+```
+src/caffe/layers/resample_layer.cu:10:31: fatal error: opencv2/gpu/gpu.hpp: No such file or directory
+```
+Do not worry, there is a fix to it!
+
+In recent versions of OpenCV (>3)
