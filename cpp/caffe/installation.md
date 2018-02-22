@@ -44,3 +44,9 @@ src/caffe/layers/resample_layer.cu:10:31: fatal error: opencv2/gpu/gpu.hpp: No s
 Do not worry, there is a fix to it!
 
 In recent versions of OpenCV (>3)
+
+## Python layers
+To support layers written in Python, in Makefile.config, uncomment the following line:
+```
+WITH_PYTHON_LAYER := 1`
+```
