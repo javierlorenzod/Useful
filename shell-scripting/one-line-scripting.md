@@ -10,3 +10,11 @@ find . -type f -name "*.png" -not -name "*heatmaps.png" -print | while read f; d
   mogrify -format jpg $f
 done
 ```
+3. To deactivate globbing in order to use * as a character:
+```shell
+set -f
+```
+To activate it:
+```shell
+set +f
+```
