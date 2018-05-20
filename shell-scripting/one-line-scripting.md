@@ -18,3 +18,8 @@ To activate it:
 ```shell
 set +f
 ```
+4. To get the return value of a function in C (obtained from [this answer in StackOverflow](https://stackoverflow.com/questions/8626109/how-can-i-get-what-my-main-function-has-returned):
+```shell
+./<binary_filename>
+echo $?
+```
