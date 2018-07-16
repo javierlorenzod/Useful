@@ -11,3 +11,4 @@
 ### Machine Learning
 #### Libraries
 - [Shark Machine Learning](http://www.shark-ml.org/): fast, modular, feature-rich open-source C++ machine learning library.
+- [Weka](https://www.cs.waikato.ac.nz/ml/weka/)
