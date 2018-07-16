@@ -8,3 +8,6 @@
 ### LaTeX
 - [LaTeX Table Generator](https://www.tablesgenerator.com/latex_tables): import data from files and convert to LaTeX format
 ### [Video](./tools/video.md)
+### Machine Learning
+#### Libraries
+- [Shark Machine Learning](http://www.shark-ml.org/): fast, modular, feature-rich open-source C++ machine learning library.
