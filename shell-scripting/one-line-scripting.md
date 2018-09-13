@@ -23,3 +23,7 @@ set +f
 ./<binary_filename>
 echo $?
 ```
+5. Change name of all files in a directory using format:
+```shell
+ ls | cat -n | while read n f; do mv "$f" $(printf "%06d.png" "$n"); done
+```
