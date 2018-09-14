@@ -16,3 +16,20 @@ Make a symlink: ln -s /mnt/pd0/docker /var/lib/docker
 Take a peek at the directory structure to make sure it looks like it did before the mv: ls /var/lib/docker/ (note the trailing slash to resolve the symlink)
 Start docker back up service docker start
 restart your containers
+
+## Detect and Track
+
+1. Crear container con la siguiente instrucción (dentro de la carpeta *docker*):
+```
+docker build -t "detect_and_track:Dockerfile" .
+```
+
+1. Lanzar esta línea para ejecutar el docker de "detect and track"
+```
+docker run --runtime=nvidia -i -t detect_and_track:Dockerfile /bin/bash
+```
+
+1. Una vez dentro, se puede ejecutar lo siguiente para copiar archivos:
+```
+docker cp pretrained_models-selected a5a4fc6539b7:/detectandtrack/pretrained_models-selected
+```
