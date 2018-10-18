@@ -27,3 +27,7 @@ echo $?
 ```shell
  ls | cat -n | while read n f; do mv "$f" $(printf "%06d.png" "$n"); done
 ```
+6. Delete folders inside the path which name includes `name_desired`:
+```shell
+rm -rf `find . -maxdepth <num> -type d -name "<name_desired>"`
+```
