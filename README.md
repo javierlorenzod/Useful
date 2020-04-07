@@ -7,6 +7,7 @@
 - [StackEdit](https://stackedit.io/): In-browser Markdown editor. Also in [**github**](https://github.com/benweet/stackedit)
 ### LaTeX
 - [LaTeX Table Generator](https://www.tablesgenerator.com/latex_tables): import data from files and convert to LaTeX format
+- [Arxiv latex files cleaner](https://github.com/google-research/arxiv-latex-cleaner): useful to delete unnecesary files and reduce the size of the submission. **It can be useful for other types of submissions**
 ### [Video](./tools/video.md)
 ### [Image](./tools/image.md)
 ### Machine Learning
