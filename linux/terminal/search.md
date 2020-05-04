@@ -1,0 +1,1 @@
+- **[fd](https://github.com/sharkdp/fd)**. A simple, fast and user-friendly alternative to 'find'. Written in Rust. According to benchmarks with [hyperfine](https://github.com/sharkdp/hyperfine), it is faster than GNU find
