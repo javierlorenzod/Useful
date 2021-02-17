@@ -22,3 +22,44 @@ print(x1.grad)
 print(x2.grad)
 ```
 Both are the same.
+
+## Test PT_2: Reproducibility
+
+### Test PT_2_1: Dropout layer
+
+I tried this with the following environment:
+- pytorch-lightning 1.1.4
+- python 3.8.5
+- pytorch 1.7.1 (py3.8_cuda11.0.221_cudnn8.0.5_0)
+- Operating System: Ubuntu 18.04.5 LTS
+- Kernel: Linux 4.15.0-135-generic
+- Architecture: x86-64
+- Driver Version: 450.102.04
+- CUDA Version: 11.0
+
+The first part creates a vector b and saves it in a temporal file.
+
+```python
+import torch
+import torch.nn as nn
+from pytorch_lightning import seed_everything
+seed_everything(47)
+m = nn.Dropout(p=0.5).to("cuda")
+a = torch.rand(10).to("cuda")
+b = m(a)
+torch.save(b, "b_previous_borrar")
+```
+
+After that, the python console is reinitialized and the same code is executed. After loading the previous vector b, both are compared and the result is that **both contains the same data**
+
+```python
+import torch
+import torch.nn as nn
+from pytorch_lightning import seed_everything
+seed_everything(47)
+m = nn.Dropout(p=0.5).to("cuda")
+a = torch.rand(10).to("cuda")
+b = m(a)
+b_prev = torch.load("b_previous_borrar")
+b.equal(b_prev)
+```
