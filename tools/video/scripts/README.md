@@ -1,2 +1,3 @@
-- [convert_rawvideo_to_mp4.sh](./convert_rawvideo_to_mp4.sh): Converts a raw video using bayer (RGGB8 format) to mp4 file with the default video encoding. It is hard-coded to an specific case, but it can be changed.
+- [`convert_rawvideo_to_mp4.sh`](./convert_rawvideo_to_mp4.sh): Converts a raw video using bayer (RGGB8 format) to mp4 file with the default video encoding. It is hard-coded to an specific case, but it can be changed.
   - **Usage**: `sh convert_rawvideo_to_mp4.sh <raw_video_path> <converted_video_path>`
+  - **Requirements**: [_mpv_](https://github.com/mpv-player/mpv)
